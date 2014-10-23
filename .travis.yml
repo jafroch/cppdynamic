@@ -1,0 +1,34 @@
+language: cpp
+compiler:
+- gcc
+before_install:
+- sudo apt-get update -qq
+install:
+- wget http://www.biicode.com/downloads/latest/ubuntu64
+- mv ubuntu64 bii-ubuntu64.deb
+- (sudo dpkg -i bii-ubuntu64.deb) && sudo apt-get -f install
+- rm bii-ubuntu64.deb
+- wget https://s3.amazonaws.com/biibinaries/thirdparty/cmake-3.0.2-Linux-64.tar.gz
+- tar -xzf cmake-3.0.2-Linux-64.tar.gz
+- sudo cp -fR cmake-3.0.2-Linux-64/* /usr
+- rm -rf cmake-3.0.2-Linux-64
+- rm cmake-3.0.2-Linux-64.tar.gz
+script:
+- cmake --version
+- bii init dyn
+- mkdir -p ./dyn/blocks/jafroch/cppdynamic
+- mv !(biicode_project) ./dyn/blocks/jafroch/cppdynamic
+- cd dyn
+- bii find -um
+- bii cpp:build
+- cd bin
+- ./jafroch_cppdynamic_test
+after_success:
+- bii user myuser -p $BII_JAFROCH_PASSWORD
+- bii publish
+env:
+  global:
+    secure: MY_GENERATED_KEY_PASSWORD
+env:
+  global:
+    secure: M+/Hjhv5M0+MyXhTCLYUWJje4r6I8rYohUhpgjH9nODJUuC10rAokWg6L8f3Z8haaNyfFoNVYLeA1kAKtemlBJK4Mqf7Z9W92URLfL/U8xwoWzwudH2EvjUQPX8Um7Xgu5e4arHjsuQ1mzL9ghg8O6SENS4YrGZX3QfKptVEAuw=
