@@ -17,7 +17,7 @@ script:
 - cmake --version
 - bii init dyn
 - mkdir -p ./dyn/blocks/jafroch/cppdynamic
-- mv !(biicode_project) ./dyn/blocks/jafroch/cppdynamic
+- mv !(dyn) ./dyn/blocks/jafroch/cppdynamic
 - cd dyn
 - bii find -um
 - bii cpp:build
