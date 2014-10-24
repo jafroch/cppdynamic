@@ -24,7 +24,7 @@ script:
 - cd bin
 - ./jafroch_cppdynamic_test
 after_success:
-- bii user myuser -p $BII_JAFROCH_PASSWORD
+- bii user jafroch -p $BII_JAFROCH_PASSWORD
 - bii publish
 env:
   global:
