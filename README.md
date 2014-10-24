@@ -1,5 +1,7 @@
 # cppdynamic
 
+https://travis-ci.org/jafroch/cppdynamic.svg?branch=master
+
 The [biicode block](http://www.biicode.com/jafroch/jafroch/cppdynamic/master) has been automatically published from the [forked github repo](https://github.com/toeb/cppdynamic) .It includes slight modifications added to the original repository: [toeb/cppdynamic](https://github.com/toeb/cppdynamic) in order to work properly with biicode.
 
 To use it in biicode include:
