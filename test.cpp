@@ -4,6 +4,8 @@
 
 int main(){
     {
+
+      
       // dynamic object can be a fundamental type
       dynamic::DynamicObject uut = 33;
       assert(33 == (int)uut);
