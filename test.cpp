@@ -10,6 +10,8 @@ int main(){
       dynamic::DynamicObject uut = 33;
       assert(33 == (int)uut);
 
+
+
     }
   {
     // dynamic object can be a complex type
