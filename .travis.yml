@@ -28,7 +28,4 @@ after_success:
 - bii publish
 env:
   global:
-    secure: MY_GENERATED_KEY_PASSWORD
-env:
-  global:
     secure: M+/Hjhv5M0+MyXhTCLYUWJje4r6I8rYohUhpgjH9nODJUuC10rAokWg6L8f3Z8haaNyfFoNVYLeA1kAKtemlBJK4Mqf7Z9W92URLfL/U8xwoWzwudH2EvjUQPX8Um7Xgu5e4arHjsuQ1mzL9ghg8O6SENS4YrGZX3QfKptVEAuw=
